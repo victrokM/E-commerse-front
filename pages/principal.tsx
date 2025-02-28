@@ -12,9 +12,9 @@ export default function Principal(): JSX.Element {
       </div>
       <div className="absolute top-2/4 left-3/4">
         <CardContainer>
-          <div className="flex w-fit">
-            <div className="font-semibold text-xl max-w-[70%]">see the product datails</div>
-            <div>
+          <div className="flex w-fit items-center cursor-pointer">
+            <div className="font-semibold text-xl max-w-[180px]">see the product datails</div>
+            <div className="w-fit">
               <FaArrowRight />
             </div>
           </div>
