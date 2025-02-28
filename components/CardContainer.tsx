@@ -1,0 +1,16 @@
+import React, { JSX } from "react";
+import CardImage from "./CardImage";
+
+interface props {   
+  children: React.ReactNode;
+  src?: string;
+}
+
+export default function CardContainer({ children, src }: props): JSX.Element {
+  return (
+    <div className="min-w-1/4 min-h-1/3 bg-slate-100 rounded-2xl flex flex-col p-2 gap">
+      <CardImage src={src ?? ""} />
+      <div>{children}</div>
+    </div>
+  );
+}
