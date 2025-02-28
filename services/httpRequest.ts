@@ -88,11 +88,11 @@ export default class HttpRequest {
       });
 
       return response.json() as Response<T>;
-    } catch (err) {
-      console.error(err);
+    } catch (error) {
+      console.error(error);
       return {
         data: null,
-        errors: Array(err as string),
+        errors: Array(error as string),
         code: 500,
       };
     }
@@ -118,11 +118,11 @@ export default class HttpRequest {
       });
 
       return response.json() as Response<T>;
-    } catch (err) {
-      console.error(err);
+    } catch (error) {
+      console.error(error);
       return {
         data: null,
-        errors: Array(err as string),
+        errors: Array(error as string),
         code: 500,
       };
     }
@@ -147,11 +147,11 @@ export default class HttpRequest {
       });
 
       return response.json() as Response<T>;
-    } catch (err) {
-      console.error(err);
+    } catch (error) {
+      console.error(error);
       return {
         data: null,
-        errors: Array(err as string),
+        errors: Array(error as string),
         code: 500,
       };
     }
@@ -183,11 +183,11 @@ export default class HttpRequest {
         };
       }
       return response.json() as Response<T>;
-    } catch (err) {
-      console.error(err);
+    } catch (error) {
+      console.error(error);
       return {
         data: null,
-        errors: Array(err as string),
+        errors: Array(error as string),
         code: 500,
       };
     }
