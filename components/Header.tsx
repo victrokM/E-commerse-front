@@ -16,7 +16,7 @@ export default function Header() {
         <FiSearch className="cursor-pointer hover:text-gray-400 hover:scale-125 transition-all duration-300" />
         <LuShoppingCart className="cursor-pointer hover:text-gray-400 hover:scale-125 transition-all duration-300" />
         <div className="w-fit py-1 px-2.5 rounded-xl bg-black cursor-pointer hover:scale-110 transition-all duration-300">
-          <IoMdMenu className="text-white " />
+          <IoMdMenu className="text-white" />
         </div>
       </div>
     </div>

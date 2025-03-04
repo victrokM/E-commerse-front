@@ -9,7 +9,7 @@ interface props {
 export default function CardImage({ src }: props) {
   return (
     <div className="rounded-xl overflow-hidden">
-      <Image alt="" src={src !== "" ? src : gif} />
+      <Image alt="" src={src !== "" ? src : gif} width={0} height={0}/>
     </div>
   );
 }
