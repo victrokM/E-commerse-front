@@ -70,8 +70,10 @@ export default function Showcase(): JSX.Element {
           ))}
         </Carousel>
       </div>
-      <div className="w-fit">
-        <Button>Explore All Products</Button>
+      <div className="w-full flex justify-center">
+        <div className="w-fit">
+          <Button>Explore All Products</Button>
+        </div>
       </div>
     </div>
   );

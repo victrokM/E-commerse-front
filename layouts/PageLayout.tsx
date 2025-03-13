@@ -10,8 +10,10 @@ export default function PageLayout({ children }: Props): JSX.Element {
   return (
     <div>
       <Header></Header>
-      <main className="flex justify-center items-center flex-col max-w-[1400px] gap-16">
-        {children}
+      <main className="flex w-full justify-center items-center">
+        <div className="flex w-full justify-center items-center flex-col max-w-[1400px] h-full gap-16">
+          {children}
+        </div>
       </main>
       <Footer />
     </div>
