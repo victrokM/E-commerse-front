@@ -1,4 +1,3 @@
-import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import React, { JSX } from 'react';
 
@@ -10,8 +9,9 @@ export default function PageLayout({ children }: Props): JSX.Element {
   return (
     <div>
       <Header></Header>
-      <main>{children}</main>
-      <Footer />
+      <main className="flex justify-center items-center flex-col max-w-[1400px]">
+        {children}
+      </main>
     </div>
   );
 }
