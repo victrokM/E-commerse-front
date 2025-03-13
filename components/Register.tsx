@@ -88,8 +88,8 @@ export default function Register(): JSX.Element {
         />
         <button
           className={clsx(
-            ' rounded-lg p-2 w-[40%] hover:scale-105 transition-all duration-200 text-center h-fit mt-3 font-bold shadow-lg ',
-            loading ? 'bg-zinc-300 text-[#F5F5F5]' : 'bg-gray-400 text-white'
+            ' rounded-lg p-2 text-sm w-[40%] hover:scale-110 transition-all duration-100 text-center h-fit mt-3 shadow-xl ',
+            loading ? 'bg-zinc-300 text-[#F5F5F5]' : ''
           )}
         >
           {loading ? (

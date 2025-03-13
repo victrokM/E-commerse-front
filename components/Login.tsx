@@ -97,7 +97,7 @@ export default function Login(): JSX.Element {
         <button
           type="submit"
           className={clsx(
-            'animate-scale-in rounded-lg py-2 mt-5 w-[150px] text-sm shadow-xl'
+            'rounded-lg py-2 mt-5 w-[150px] text-sm shadow-xl hover:scale-110 transition-all duration-100'
           )}
         >
           Sign in
