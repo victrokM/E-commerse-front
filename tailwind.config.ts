@@ -14,7 +14,8 @@ export default {
     extend: {
       colors: {
         background: 'var(--background)',
-        foreground: 'var(--foreground)'
+        foreground: 'var(--foreground)',
+        pane: 'rgba(46, 44, 54, 0.2)',
       }
     }
   },
