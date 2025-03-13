@@ -4,21 +4,27 @@ import React, { JSX } from 'react';
 import clsx from 'clsx';
 import Carousel from 'react-multi-carousel';
 import responsive from '@/utils/breakpoint';
+import { product } from '@/models/product.interface';
+
+interface CardProps {
+  product: product;
+  onCreateCarousels?: () => void;
+  isProduct?: boolean;
+  index?: number;
+}
 
 interface Props {
-  // Products: Product[];
-  // columnProducts: ColumnProduct[];
-  // cardComponent?: React.ComponentType<CardProps>;
+  Products: product[];
+  cardComponent?: React.ComponentType<CardProps>;
   isProduct?: boolean;
   useLoading?: boolean;
 }
 
-export default function Grid({
-  // Products,
-  // cardComponent,
-  isProduct
+export default function CarouselComponent({
+  Products,
+  cardComponent
 }: Props): JSX.Element {
-  // const CardComponent = cardComponent ?? (() => <></>);
+  const CardComponent = cardComponent ?? (() => <></>);
 
   return (
     <div className="max-w-[1300px]">
@@ -51,19 +57,19 @@ export default function Grid({
         slidesToSlide={2}
         swipeable
       >
-        xd
-        {/* {Products?.map((product) => (
+        {Products?.map((item) => (
           <div
-            key={product.id}
-            className={clsx(
-              'grow-0 shrink-0 px-2.5 mb-4 max-w-[50%] md:max-w-[25%] lg:w-[20%] basis-6/12 md:basis-1/4 lg:basis-[20%]'
-            )}
+            key={item.id}
+            className={
+              clsx()
+              // 'grow-0 shrink-0 px-2.5 mb-4 max-w-[50%] md:max-w-[25%] lg:w-[20%] basis-6/12 md:basis-1/4 lg:basis-[20%]'
+            }
           >
             <>
-              <CardComponent product={product} isProduct={isProduct} />
+              <CardComponent product={item} />
             </>
           </div>
-        ))} */}
+        ))}
       </Carousel>
     </div>
   );
