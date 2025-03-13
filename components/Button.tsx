@@ -10,6 +10,7 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   padding?: string;
   loading?: boolean;
   disabled?: boolean;
+  tipo?: 'primary' | 'secundary' | 'tercerio';
 }
 
 const Button = forwardRef<HTMLButtonElement, Props>(function Button(
@@ -20,6 +21,7 @@ const Button = forwardRef<HTMLButtonElement, Props>(function Button(
     font = 'text-md',
     // padding = 'p-1.5',
     opacity = 'opacity-100',
+    tipo = 'primary',
     ...rest
   },
   ref
@@ -30,9 +32,12 @@ const Button = forwardRef<HTMLButtonElement, Props>(function Button(
       type="button"
       disabled={disabled || loading}
       className={clsx(
-        'w-full whitespace-nowrap h-fit transition duration-300 disabled:bg-[rgba(0,_0,_0,_0.12)] bg-slate-800 text-white p-2 rounded-md',
+        'w-full whitespace-nowrap h-fit transition duration-300 disabled:bg-[rgba(0,_0,_0,_0.12)] p-2 ',
         font,
-        opacity
+        opacity,
+        tipo === 'primary' && 'bg-slate-800 text-white rounded-xl',
+        tipo === 'secundary' && 'bg-white text-black rounded-3xl'
+        // tipo === 'tercerio' && 'bg-[#FFD700] text-black'
       )}
       {...rest}
     >

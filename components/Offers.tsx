@@ -18,16 +18,20 @@ export default function Offers(): JSX.Element {
             className="overflow-hidden rounded-2xl w-[400px] h-[500px] object-cover"
           />
         </div>
-        <div className="bg-black">
+        <div className="flex bg-black rounded-2xl flex-col justify-around items-center p-4">
           <div>
             <Button>Black Friday Only</Button>
           </div>
-          <div>Black Friday Flash Sale-50% Off Sitewide</div>
+          <div className="text-white text-5xl w-[22rem] text-center font-bold">
+            Black Friday Flash Sale-50% Off Sitewide
+          </div>
           <div>
-            <Button>
-              <div>Check Offers</div>
-              <div>
-                <FaArrowRight />
+            <Button tipo="secundary">
+              <div className="p-2 flex gap-2">
+                <div className="text-xs font-bold">Check Offers</div>
+                <div>
+                  <FaArrowRight />
+                </div>
               </div>
             </Button>
           </div>
