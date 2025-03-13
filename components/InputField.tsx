@@ -1,5 +1,5 @@
-import clsx from "clsx";
-import React, { ChangeEvent, useState } from "react";
+import clsx from 'clsx';
+import React, { ChangeEvent, useState } from 'react';
 
 interface Props {
   label: string;
@@ -8,7 +8,7 @@ interface Props {
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
   error?: string;
   number?: boolean;
-  type?: "text" | "date" | "number" | "email";
+  type?: 'text' | 'date' | 'number' | 'email';
   disabled?: boolean;
   read?: boolean;
 }
@@ -20,9 +20,9 @@ export default function InputField({
   onChange,
   error,
   number,
-  type = "text",
+  type = 'text',
   disabled = false,
-  read = false,
+  read = false
 }: Props) {
   const [focus, setFocus] = useState<boolean>(false);
 
@@ -32,29 +32,29 @@ export default function InputField({
         <label
           htmlFor={name}
           className={clsx(
-            "my-1  label w-fit  bg-[#FAFAFA]   transition-all duration-200",
+            'my-1  label w-fit bg-white  absolute transition-all duration-200',
             focus &&
               (value || !value) &&
-              "-translate-y-6 text-[10px] text-[#9C00E2] font-bold left-2 px-1 bg-[#FAFAFA]",
+              '-translate-y-3 text-[10px] text-cyan-700 font-bold left-2 px-1 bg-white',
             !focus &&
               value &&
               !error &&
-              '-translate-y-6 text-[10px] text-stone-400 font-bold left-2 px-1 bg-[#FAFAFA]"',
+              '-translate-y-6 text-[10px] text-stone-400 font-bold left-2 px-1 bg-[#FAFAFA] bg-white"',
             !focus &&
               !value &&
               !error &&
-              "text-xs font-medium text-stone-400 left-3 hover:cursor-text",
-            error && !focus && "text-red-500 text-xs ",
-            error && focus && "text-red-500 text-[10px] -translate-y-5",
+              'bottom-[10px] text-sm font-medium text-stone-400 left-3 hover:cursor-text',
+            error && !focus && 'text-red-500 text-xs ',
+            error && focus && 'text-red-500 text-[10px] -translate-y-5',
             !focus &&
               value &&
               error &&
-              "text-red-500 text-[10px] -translate-y-6 font-bold px-1 left-2",
+              'text-red-500 text-[10px] -translate-y-6 font-bold px-1 left-2',
             !focus &&
               !value &&
               error &&
-              "text-xs font-medium text-red-500 left-3 hover:cursor-text",
-            disabled && "text-gray-400 bg-gray-100"
+              'text-xs font-medium text-red-500 left-3 hover:cursor-text',
+            disabled && 'text-gray-400 bg-gray-100'
           )}
         >
           {label}
@@ -68,8 +68,8 @@ export default function InputField({
             if (
               number &&
               !/[0-9]/.test(e.key) &&
-              e.key !== "Backspace" &&
-              e.key !== "Tab"
+              e.key !== 'Backspace' &&
+              e.key !== 'Tab'
             ) {
               e.preventDefault();
             }
@@ -79,12 +79,12 @@ export default function InputField({
           onBlur={() => setFocus(false)}
           onChange={onChange}
           className={clsx(
-            " bg-[#FAFAFA]  w-full  focus:outline-none text-sm px-3 py-[14px] z-20 border-[1px]  rounded-md",
+            ' bg-white w-[300px]  focus:outline-none text-sm px-3 py-[12px] z-20 border-[1px]  rounded-md',
             error
-              ? "border-red-500 focus:border-red-500 focus:border-[1px]"
-              : "border-stone-300 hover:border-stone-500 focus:border-[#9C00E2] focus:border-[2px]",
+              ? 'border-red-500 focus:border-red-500 focus:border-[1px]'
+              : 'border-stone-300 hover:border-stone-500 focus:border-cyan-700 focus:border-[2px]',
             disabled &&
-              "text-gray-400 bg-gray-100 focus:border-none hover:border-none"
+              'text-gray-400 bg-gray-100 focus:border-none hover:border-none'
           )}
         />
       </div>

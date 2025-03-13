@@ -32,10 +32,10 @@ export default function Login(): JSX.Element {
               'my-1 label w-fit absolute bg-white transition-all duration-200',
               focus &&
                 (hasValue || !hasValue) &&
-                '-translate-y-2 text-[9px] text-cyan-700 font-bold left-2 px-1 bg-white',
+                '-translate-y-3 text-[10px] text-cyan-700 font-bold left-2 px-1 bg-white',
               !focus &&
                 hasValue &&
-                '-translate-y-2 text-[9px] text-stone-400 font-bold left-2 px-1 bg-white"',
+                '-translate-y-3 text-[10px] text-stone-400 font-bold left-2 px-1 bg-white"',
               !focus &&
                 !hasValue &&
                 ' bottom-3 text-[13px] text-stone-400 font-bold left-2 px-1 bg-white"'
@@ -63,10 +63,10 @@ export default function Login(): JSX.Element {
               'my-1  label w-fit  bg-white absolute transition-all duration-200',
               focusPass &&
                 (hasValuePass || !hasValuePass) &&
-                '-translate-y-2 text-[9px] text-cyan-700 font-bold left-2 px-1 bg-white',
+                '-translate-y-3 text-[10px] text-cyan-700 font-bold left-2 px-1 bg-white',
               !focusPass &&
                 hasValuePass &&
-                '-translate-y-2 text-[9px] text-stone-400 font-bold left-2 px-1 bg-white"',
+                '-translate-y-3 text-[10px] text-stone-400 font-bold left-2 px-1 bg-white"',
               !focusPass &&
                 !hasValuePass &&
                 ' bottom-3 text-[13px] text-stone-400 font-bold left-2 px-1 bg-white"'
