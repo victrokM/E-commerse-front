@@ -44,7 +44,7 @@ export default function Register(): JSX.Element {
   return (
     <div className="w-full">
       <div className=" text-2xl font-semibold text-gray-400 whitespace-nowrap mt-5">
-        Sign in
+        Sign Up
       </div>
       <form
         onSubmit={handleSubmit}
